@@ -26,11 +26,11 @@ section {
     margin-bottom: 50px;
 }
 
-.container #image-carousel {
+/* .container #image-carousel {
     width: 90%;
     height: auto; 
     max-width: 1512px;
-}
+} */
 
 li.splide__slide {
   text-align: center;
@@ -58,6 +58,12 @@ li.splide__slide {
   /* margin-right:auto;
   margin-left:auto; */
 }
+#video3 {
+  width: 100%;
+  height: auto; 
+  max-width: 1512px;
+  object-fit: cover;
+ }
 
 body {
   background-color: #9a9ea2;
@@ -126,91 +132,142 @@ label.dscrp {
   display: block;
   padding-left: 10px;
   padding-right: 10px;
-  text-transform: capitalize;
+  text-transform: uppercase;
 }
 
 label.dscrp a{
   color: #a40c1f;
 }
 
-label#archive {
+a.active {
   color: #2c2c2c;
   margin-top: 0px;
   padding-bottom: 50px;
   text-align: center;
-  display: block;
+}
+div#menu a{
+  padding: 0 40px 0 40px;
+  color: #000;
+}
+div#menu a.active{
+  color: #a40c1f;
+}
+div#menu {
+  text-align: center;
+  padding: 20px 0 50px 0;
+}
+.tabcontent {
+  animation: fadeEffect 1s;
 }
 
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
 </style>
 </head>
 <body>
 <img id="wings" src="sw-page-bg.png"/>
 <div class="container">
-  <label id="archive">ARCHIVE</label>
-  <section id="image-carousel" class="splide">
-    <div class="splide__track">
-      <ul class="splide__list">
-        <li class="splide__slide">
-          <img src="lghtr/lghtr-2.png" alt="">
-        </li>
-        <li class="splide__slide">
-          <img src="lghtr/lghtr-1.png" alt="">
-        </li>
-        <li class="splide__slide">
-        <video id="video1" autoplay src="lghtr/lghtr-2.mov" type="video/mp4" onclick="this.play()"/>
-        </video>
-        </li>
-      </ul>
-    </div>
-  </section>
-  <label class="dscrp">BLU LIGHTER<BR/>
-    <BR/>
-    DYED SALMON SKIN<BR/>
-NATURAL BLUE SPONGE CORAL<BR/>
-FRESHWATER PEARLS<BR/>
-TURQUOISE FROM NEPAL MONASTERY<BR/>
+  <div id="menu">
+    <a id="aarch" class="tablinks active" href="javascript:openTab('arch')">ARCHIVE</a>
+    <a id="acad" class="tablinks" href="javascript:openTab('cad')">CAD</a>
+    <a id="aabout" class="tablinks" href="javascript:openTab('about')">CONTACT</a>
+  </div>
+
+  <div id="arch" class="tabcontent">
+    <section id="image-carousel" class="splide">
+      <div class="splide__track">
+        <ul class="splide__list">
+          <li class="splide__slide">
+            <img src="lghtr/lghtr-2.png" alt="">
+          </li>
+          <li class="splide__slide">
+            <img src="lghtr/lghtr-1.png" alt="">
+          </li>
+          <li class="splide__slide">
+          <video id="video1" autoplay src="lghtr/lghtr-2.mov" type="video/mp4" onclick="this.play()"/>
+          </video>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <label class="dscrp">BLU LIGHTER<BR/>
+      <BR/>
+      DYED SALMON SKIN<BR/>
+      NATURAL BLUE SPONGE CORAL<BR/>
+      FRESHWATER PEARLS<BR/>
+      TURQUOISE FROM NEPAL MONASTERY<BR/>
+      <br/>
+      THANK YOU<br/>
+      TO PURCHASE <a href="https://ig.me/m/SFFRNGWTHN">DM SFFRNGWTHN</a
+      <br/>
+      <br/>
+      OCT. 6TH 2024
+    </label>
+    <section id="image-carouse-2" class="splide">
+      <div class="splide__track">
+        <ul class="splide__list">
+          <li class="splide__slide">
+            <img src="srgtcs/IMG_7304.PNG" alt="">
+          </li>
+          <li class="splide__slide">
+            <img src="srgtcs/IMG_7281.PNG" alt="">
+          </li>
+          <li class="splide__slide">
+            <img src="srgtcs/IMG_7274.PNG" alt="">
+          </li>
+          <li class="splide__slide">
+            <img src="srgtcs/IMG_7277.PNG" alt="">
+          </li>
+          <li class="splide__slide">
+          <video id="video2" autoplay src="srgtcs/vid-1512.mov" type="video/mp4" onclick="this.play()"/>
+          </video>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <label class="dscrp">HANDMADE STINGRAY-WRAPPED CIGARETTE BOX WITH DETACHABLE TOOTH CHARM<br/>
+      <br/>
+      RED BEADS FROM NATIVE TRADING POST<br/>
+      WOODEN BEADS FROM BHUTAN<br/>
+      ETHICALLY SOURCED STINGRAY LEATHER AND FAWN TOOTH<br/>
+      <br/>
+      THANK YOU<br/>
+      SOLD
+      <br/>
+      <br/>
+      SEPT. 8TH 2024
+    </label>
+    <!-- <img class="prd" src="srgtcs/IMG_7304.PNG"/> -->
+  </div>
+  <div id="cad" class="tabcontent">
+    <section id="image-carouse-3" class="splide">
+      <div class="splide__track">
+        <ul class="splide__list">
+          <li class="splide__slide">
+          <video id="video3" autoplay src="crss/crossnoext.mov" type="video/mp4" onclick="this.play()"/>
+          </video>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <label class="dscrp">PLATINUM & TANZANITE<BR/>
+      <br/>
+      OCT. 20TH 2024
+    </label>
+  </div>
+  <div id="about" class="tabcontent">
+    <label class="dscrp">
+    GULIA GG<br/>
     <br/>
-    THANK YOU<br/>
-    TO PURCHASE <a href="https://ig.me/m/SFFRNGWTHN">DM SFFRNGWTHN</a
-    <br/>
-    <br/>
-    OCT. 6TH 2024
-  </label>
-  <section id="image-carouse-2" class="splide">
-    <div class="splide__track">
-      <ul class="splide__list">
-        <li class="splide__slide">
-          <img src="srgtcs/IMG_7304.PNG" alt="">
-        </li>
-        <li class="splide__slide">
-          <img src="srgtcs/IMG_7281.PNG" alt="">
-        </li>
-        <li class="splide__slide">
-          <img src="srgtcs/IMG_7274.PNG" alt="">
-        </li>
-        <li class="splide__slide">
-          <img src="srgtcs/IMG_7277.PNG" alt="">
-        </li>
-        <li class="splide__slide">
-        <video id="video2" autoplay src="srgtcs/vid-1512.mov" type="video/mp4" onclick="this.play()"/>
-        </video>
-        </li>
-      </ul>
-    </div>
-  </section>
-  <label class="dscrp">HANDMADE STINGRAY-WRAPPED CIGARETTE BOX WITH DETACHABLE TOOTH CHARM<br/>
-    <br/>
-    RED BEADS FROM NATIVE TRADING POST<br/>
-    WOODEN BEADS FROM BHUTAN<br/>
-    ETHICALLY SOURCED STINGRAY LEATHER AND FAWN TOOTH<br/>
-    <br/>
-    THANK YOU<br/>
-    SOLD
-    <br/>
-    <br/>
-    SEPT. 8TH 2024
-  </label>
-  <!-- <img class="prd" src="srgtcs/IMG_7304.PNG"/> -->
+info@sffrngwthn.com<br/>
+<br/>
+ig: <a href="https://www.instagram.com/sffrngwthn">sffrngwthn</a><br/>
+<br/>
+Message to get started on any custom project
+</label>
+  </div>
 </div>
 <div id="mc_embed_shell">
   <!-- <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css"> -->
@@ -243,8 +300,10 @@ TURQUOISE FROM NEPAL MONASTERY<BR/>
 <script>
 new Splide( '#image-carousel' ).mount();
 new Splide( '#image-carouse-2' ).mount();
+new Splide( '#image-carouse-3' ).mount();
 var video1 = document.getElementById('video1');
 var video2 = document.getElementById('video2');
+var video3 = document.getElementById('video3');
 
 function videoPausePlayHandler1(e) {
     if (e.type == 'playing') {
@@ -266,15 +325,46 @@ function videoPausePlayHandler2(e) {
     }
 }
 
+function videoPausePlayHandler3(e) {
+    if (e.type == 'playing') {
+     //add controls
+     video3.setAttribute("controls","controls");
+    } else if (e.type == 'pause') {
+   //remove controls
+   video3.removeAttribute("controls");
+    }
+}
+
 //Add event listeners
 video1.addEventListener('playing', videoPausePlayHandler1, false);
 video1.addEventListener('pause', videoPausePlayHandler1, false);
 video2.addEventListener('playing', videoPausePlayHandler2, false);
 video2.addEventListener('pause', videoPausePlayHandler2, false);
+video3.addEventListener('playing', videoPausePlayHandler3, false);
+video3.addEventListener('pause', videoPausePlayHandler3, false);
 
 document.getElementById("wings").onclick = function(){
-  document.getElementById("archive").scrollIntoView({behavior: "smooth"});
+  document.getElementById("menu").scrollIntoView({behavior: "smooth"});
 }
+
+function openTab(cityName) {
+  var i, tabcontent, tablinks;
+
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  document.getElementById(cityName).style.display = "block";
+  document.getElementById('a'+cityName).className = document.getElementById('a'+cityName).className+" active";
+}
+
+openTab("arch");
 </script>
 </body>
 </html>
