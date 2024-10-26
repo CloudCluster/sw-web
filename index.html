@@ -186,7 +186,7 @@ div#menu {
             <img src="lghtr/lghtr-1.png" alt="">
           </li>
           <li class="splide__slide">
-          <video id="video1" autoplay src="lghtr/lghtr-2.mov" type="video/mp4" onclick="this.play()"/>
+          <video id="video1" src="lghtr/lghtr-2.mov" type="video/mp4" onclick="this.play()"/>
           </video>
           </li>
         </ul>
@@ -221,7 +221,7 @@ div#menu {
             <img src="srgtcs/IMG_7277.PNG" alt="">
           </li>
           <li class="splide__slide">
-          <video id="video2" autoplay src="srgtcs/vid-1512.mov" type="video/mp4" onclick="this.play()"/>
+          <video id="video2" src="srgtcs/vid-1512.mov" type="video/mp4" onclick="this.play()"/>
           </video>
           </li>
         </ul>
@@ -246,7 +246,7 @@ div#menu {
       <div class="splide__track">
         <ul class="splide__list">
           <li class="splide__slide">
-          <video id="video3" autoplay src="crss/crossnoext.mov" type="video/mp4" onclick="this.play()"/>
+          <video id="video3" src="crss/crossnoext.mov" type="video/mp4" onclick="this.play()"/>
           </video>
           </li>
         </ul>
@@ -259,14 +259,14 @@ div#menu {
   </div>
   <div id="about" class="tabcontent">
     <label class="dscrp">
-    GULIA GG<br/>
-    <br/>
-info@sffrngwthn.com<br/>
-<br/>
-ig: <a href="https://www.instagram.com/sffrngwthn">sffrngwthn</a><br/>
-<br/>
-Message to get started on any custom project
-</label>
+      GULIA GG<br/>
+      <br/>
+      info@sffrngwthn.com<br/>
+      <br/>
+      ig: <a href="https://www.instagram.com/sffrngwthn">sffrngwthn</a><br/>
+      <br/>
+      Message to get started on any custom project
+    </label>
   </div>
 </div>
 <div id="mc_embed_shell">
@@ -310,6 +310,7 @@ function videoPausePlayHandler1(e) {
       video1.setAttribute("controls","controls");
     } else if (e.type == 'pause') {
       video1.removeAttribute("controls");
+      video1.pause();
     }
 }
 
@@ -318,6 +319,7 @@ function videoPausePlayHandler2(e) {
       video2.setAttribute("controls","controls");
     } else if (e.type == 'pause') {
       video2.removeAttribute("controls");
+      video2.pause();
     }
 }
 
@@ -326,6 +328,7 @@ function videoPausePlayHandler3(e) {
       video3.setAttribute("controls","controls");
     } else if (e.type == 'pause') {
       video3.removeAttribute("controls");
+      video3.pause();
     }
 }
 
