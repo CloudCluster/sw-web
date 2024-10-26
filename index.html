@@ -50,6 +50,14 @@ li.splide__slide {
   /* margin-right:auto;
   margin-left:auto; */
 }
+#video2 {
+  width: 100%;
+  height: auto; 
+  max-width: 1512px;
+  object-fit: cover;
+  /* margin-right:auto;
+  margin-left:auto; */
+}
 
 body {
   background-color: #9a9ea2;
@@ -118,6 +126,11 @@ label.dscrp {
   display: block;
   padding-left: 10px;
   padding-right: 10px;
+  text-transform: capitalize;
+}
+
+label.dscrp a{
+  color: #a40c1f;
 }
 
 label#archive {
@@ -138,6 +151,35 @@ label#archive {
     <div class="splide__track">
       <ul class="splide__list">
         <li class="splide__slide">
+          <img src="lghtr/lghtr-2.png" alt="">
+        </li>
+        <li class="splide__slide">
+          <img src="lghtr/lghtr-1.png" alt="">
+        </li>
+        <li class="splide__slide">
+        <video id="video1" autoplay src="lghtr/lghtr-2.mov" type="video/mp4" onclick="this.play()"/>
+        </video>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <label class="dscrp">BLU LIGHTER<BR/>
+    <BR/>
+    DYED SALMON SKIN<BR/>
+NATURAL BLUE SPONGE CORAL<BR/>
+FRESHWATER PEARLS<BR/>
+TURQUOISE FROM NEPAL MONASTERY<BR/>
+    <br/>
+    THANK YOU<br/>
+    TO PURCHASE <a href="https://ig.me/m/SFFRNGWTHN">DM SFFRNGWTHN</a
+    <br/>
+    <br/>
+    OCT. 6TH 2024
+  </label>
+  <section id="image-carouse-2" class="splide">
+    <div class="splide__track">
+      <ul class="splide__list">
+        <li class="splide__slide">
           <img src="srgtcs/IMG_7304.PNG" alt="">
         </li>
         <li class="splide__slide">
@@ -150,7 +192,7 @@ label#archive {
           <img src="srgtcs/IMG_7277.PNG" alt="">
         </li>
         <li class="splide__slide">
-        <video id="video1" autoplay src="srgtcs/vid-1512.mov" type="video/mp4" onclick="this.play()"/>
+        <video id="video2" autoplay src="srgtcs/vid-1512.mov" type="video/mp4" onclick="this.play()"/>
         </video>
         </li>
       </ul>
@@ -162,7 +204,9 @@ label#archive {
     WOODEN BEADS FROM BHUTAN<br/>
     ETHICALLY SOURCED STINGRAY LEATHER AND FAWN TOOTH<br/>
     <br/>
-    THANK YOU
+    THANK YOU<br/>
+    SOLD
+    <br/>
     <br/>
     SEPT. 8TH 2024
   </label>
@@ -198,9 +242,11 @@ label#archive {
 <!--<p>CMNG SN</p>-->
 <script>
 new Splide( '#image-carousel' ).mount();
+new Splide( '#image-carouse-2' ).mount();
 var video1 = document.getElementById('video1');
+var video2 = document.getElementById('video2');
 
-function videoPausePlayHandler(e) {
+function videoPausePlayHandler1(e) {
     if (e.type == 'playing') {
      //add controls
      video1.setAttribute("controls","controls");
@@ -210,9 +256,21 @@ function videoPausePlayHandler(e) {
     }
 }
 
+function videoPausePlayHandler2(e) {
+    if (e.type == 'playing') {
+     //add controls
+     video2.setAttribute("controls","controls");
+    } else if (e.type == 'pause') {
+   //remove controls
+   video2.removeAttribute("controls");
+    }
+}
+
 //Add event listeners
-video1.addEventListener('playing', videoPausePlayHandler, false);
-video1.addEventListener('pause', videoPausePlayHandler, false);
+video1.addEventListener('playing', videoPausePlayHandler1, false);
+video1.addEventListener('pause', videoPausePlayHandler1, false);
+video2.addEventListener('playing', videoPausePlayHandler2, false);
+video2.addEventListener('pause', videoPausePlayHandler2, false);
 
 document.getElementById("wings").onclick = function(){
   document.getElementById("archive").scrollIntoView({behavior: "smooth"});
